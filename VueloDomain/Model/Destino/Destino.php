@@ -1,6 +1,6 @@
 <?php
 
-include_once './VueloDomain/Model/Coordenadas/Coordenadas.php';
+include_once $_SERVER["DOCUMENT_ROOT"].'/Vuelos/VueloDomain/Model/Coordenadas/Coordenadas.php';
 
 class Destino {
 
@@ -13,9 +13,13 @@ class Destino {
         $this->coordenada = new Coordenadas($lat, $long);
         $this->horaLlegada = $horaLlegada;
     }
-    
+
     function getCoordenadas() {
         return $this->coordenada;
+    }
+
+    function getHorallegada() {
+        return $this->horaLlegada;
     }
 
 }

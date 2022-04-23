@@ -1,7 +1,7 @@
 <?php
 
-include_once './VueloDomain/Model/EncargadoVuelo/ValueObjects/NombrePersonaValue.php';
-include_once './VueloDomain/Model/EncargadoVuelo/ValueObjects/NumeroTelefonicoValue.php';
+include_once $_SERVER["DOCUMENT_ROOT"]."/Vuelos/VueloDomain/Model/EncargadoVuelo/ValueObjects/NombrePersonaValue.php";
+include_once $_SERVER["DOCUMENT_ROOT"].'/Vuelos/VueloDomain/Model/EncargadoVuelo/ValueObjects/NumeroTelefonicoValue.php';
 
 class EncargadoVuelo {
 
@@ -21,6 +21,10 @@ class EncargadoVuelo {
 
     function getNombreEncargado() {
         return $this->nombreEncargado->getNombre();
+    }
+
+    function getUid() {
+        return $this->uid;
     }
 
 }

@@ -19,13 +19,17 @@ class Vuelo {
         $this->setDestino($destino);
         $this->encargadoVuelos = $encargado;
         $this->obtenerTripulacionDisponible();
-        $this->calcularMillas($origen, $destino);
+        //$this->calcularMillas($origen, $destino);
     }
 
     function crearVuelo($origen, $destino, $codAvion, $tripulantes, $usuarioCreador) {
         
     }
     
+    function getUid() {
+        return $this->uid;
+    }
+
     function getNumeroVuelo() {
         return $this->numeroVuelo;
     }
@@ -63,9 +67,8 @@ class Vuelo {
         $dist = rad2deg($dist);
         $miles = $dist * 60 * 1.1515;
         $unit = strtoupper("M");
-
-        return $miles;
-
+        $this->millas = $miles;
+        //return $miles;
 //        if ($unit == "K") {
 //            return ($miles * 1.609344);
 //        } else if ($unit == "N") {

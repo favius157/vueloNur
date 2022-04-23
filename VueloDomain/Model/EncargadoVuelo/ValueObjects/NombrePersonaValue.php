@@ -1,6 +1,6 @@
 <?php
 
-include_once './ShareKernel/Rules/NotlNull.php';
+include_once $_SERVER["DOCUMENT_ROOT"]."/Vuelos/ShareKernel/Rules/NotlNull.php";
 
 class NombrePersonaValue {
 
